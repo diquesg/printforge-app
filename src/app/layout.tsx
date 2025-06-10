@@ -1,21 +1,18 @@
 import "./globals.css";
-import { Montserrat_Alternates } from 'next/font/google'
-import { Albert_Sans } from 'next/font/google'
-
-const albert_sans = Albert_Sans({
-  subsets: ['latin'],
-  variable: '--font-albert-sans'
-});
-const montserrat_alternates = Montserrat_Alternates({
-  subsets: ['latin'],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: '--font-montserrat-alternates'
-});
 
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en">
       <body>
+        <header className="p-5">
+          <nav className="flex max-w-screen">
+            <img src="/printforge-logo-icon.svg" className="w-10"/>
+            <ul className="flex uppercase items-center ml-auto gap-5">
+              <li><a href="/">3D Models</a></li>
+              <li><a href="/about">About</a></li>
+            </ul>
+          </nav>
+        </header>
         {children}
       </body>
     </html>

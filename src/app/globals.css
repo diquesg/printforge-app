@@ -13,5 +13,10 @@ body {
 
 h1{
   font-family: var(--font-montserrat-alternates);
+  font-weight: bolder;
+}
+
+h2{
+  font-size: x-large;
   font-weight: bold;
 }
